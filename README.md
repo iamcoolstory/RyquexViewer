@@ -1,81 +1,85 @@
-# Ryquex Review Viewer
+# Ryquex Review Viewer — English v2
 
-Переносимый просмотрщик для совместной проверки баз, модификаторов и пассивных навыков. Рабочий проект владельца не изменяется: предложения сохраняются локально и передаются JSON-файлом.
+A portable Windows x64 catalogue and review tool for item bases, modifiers and passive skills. English is the default interface language. All edits are local review proposals: the owner's working Ryquex project is never changed automatically.
 
-## Установка и запуск
+## Download and run
 
-1. Скачайте ZIP из **Releases** этого репозитория.
-2. Распакуйте **весь архив** в отдельную папку. Не запускайте программу из архива.
-3. Запустите `Ryquex.Viewer.exe`. Папка `Public` должна оставаться рядом с ним.
-4. Viewer откроется в браузере по локальному адресу `127.0.0.1`. Интернет, установка Ryquex и отдельная установка .NET не нужны.
+1. Download `Ryquex-ReviewViewer-Windows-x64-v2.0-English.zip` from [Releases](https://github.com/iamcoolstory/RyquexViewer/releases).
+2. Extract the **entire ZIP** into a separate folder. Do not run the application from inside the archive.
+3. Run `Ryquex.Viewer.exe`. Keep the `Public` folder beside the executable.
+4. Your default browser will open the Viewer at a local `127.0.0.1` address.
 
-Требуется Windows x64 и современный браузер, например Edge или Chrome. Исполняемый файл пока не подписан: SmartScreen может показать предупреждение. Проверяйте, что архив получен из доверенного репозитория.
+Requirements: Windows x64 and a modern browser, such as Microsoft Edge or Google Chrome. No internet connection, Ryquex installation or separate .NET installation is required after downloading.
 
-Для завершения работы нажмите **Выход** в верхней панели. Одно закрытие вкладки браузера не завершает локальный сервер.
+The executable is not digitally signed yet. Windows SmartScreen may show a warning. Only run the archive obtained from the trusted repository.
 
-## Страницы
+To stop the application, click **Exit** in the Viewer header. Closing the browser tab alone does not stop the local server.
 
-- **Bases** — каталог баз с изображениями. Выберите тип и используйте поиск по имени или ID.
-- **Mods** — модификаторы по типам предметов, фильтры атрибутов, семьи и разделы Implicit, Prefix, Suffix, Craft Prefix, Craft Suffix, Enchantment. Есть распределённые и нераспределённые моды, статусы Regular / Advanced / Ultimate.
-- **Passive Skills** — раскрывающиеся тематические блоки с Minor, Medium, Major и Supreme. Поиск `major | supreme` показывает совпадения с любым из двух запросов.
-- **▱** — просмотр интерфейса. В списке рядом можно выбрать интерфейс, инвентарь или Skill Hub.
+## Pages
 
-## Инвентарь и генерация
+- **Bases** — browse item types and bases with their images. Search by base name or ID.
+- **Mods** — filter by item type and attributes, search modifiers, expand families and inspect Implicit, Prefix, Suffix, Craft Prefix, Craft Suffix and Enchantment. Unassigned, Assigned and Regular / Advanced / Ultimate sections are available.
+- **Passive Skills** — expandable thematic cards with Minor, Medium, Major and Supreme tiers. Searching `major | supreme` matches either query.
+- **▱ Preview interface** — switch between the interface overview, Inventory and Skill Hub using the adjacent selector.
 
-Выберите **▱ → Инвентарь**. Кнопка генерации создаёт 15 предметов. При выборе конкретного типа показываются его базы; стрелки переключают страницы.
+## Inventory and generation
 
-Предметы можно перетаскивать или прикреплять к курсору левым кликом. В обычном режиме правый клик используется для экипировки и снятия предмета. В режиме разработчика правый клик открывает редактор внешнего вида.
+Open **▱ → Inventory**. **Generate 15 items** creates random items. Selecting a specific item type switches to browsing its bases; the arrows move between pages.
 
-Настройки затемнения доступны через кнопку показа/скрытия настроек. Ячейки быстрого доступа очищаются своим крестиком.
+Items can be dragged or attached to the cursor with a left click. In normal mode, right-click equips or unequips an item. In developer mode, right-click opens the visual editor.
 
-## Проверка и настройка базы
+Use **Show settings / Hide settings** for interface dimming controls. Each quick-access slot has its own clear button.
 
-1. На странице **Bases** выберите тип и нужную базу.
-2. Нажмите **Настроить в инвентаре**: откроется нужная база и редактор.
-3. Либо в инвентаре включите **Разработчик** и нажмите правой кнопкой на предмет.
-4. Настройте отражение, наклон, масштаб, смещения, ширину и высоту в пикселях, отображение поверх рамки.
-5. Для настройки изображения в карточке нажмите **Редактировать на карточке**. Настройки карточки и слотов независимы.
-6. **Скопировать обычные** переносит настройки слотов в карточку.
+## Review and adjust a base
 
-Правки сохраняются автоматически. Кнопка **Сохранить изменения** также доступна.
+1. In **Bases**, select an item type and locate a base.
+2. Click **Edit in inventory** to open that base in the developer editor.
+3. Alternatively, enable **Developer** in Inventory and right-click an item.
+4. Adjust horizontal mirroring, rotation, scale, horizontal/vertical offsets, pixel width/height and drawing over the frame.
+5. Use **Edit card appearance** to adjust its item-card image. Slot and card settings are independent.
+6. **Copy slot settings** copies the slot appearance into the card appearance.
 
-Горячие клавиши редактора:
+Changes save automatically. **Save changes** is also available.
 
-- `↑` / `↓` — выбрать параметр.
-- `←` / `→` — изменить значение или переключить галочку.
-- `Shift` — увеличенный шаг изменения.
-- `\` — переключиться между слотами и карточкой.
-- `]` — скопировать настройки слотов в карточку.
+### Editor shortcuts
 
-Кнопка **Просмотр инвентаря** возвращает к отображению инвентаря. **БАЗА ГОВНА** помечает неподходящую базу и позволяет написать комментарий. На странице Bases есть кнопка снятия отметки.
+- `↑` / `↓` — select the parameter to edit.
+- `←` / `→` — adjust the value or toggle a checkbox.
+- `Shift` — use a larger adjustment step.
+- `\` — switch between slot and card editing.
+- `]` — copy slot settings into the card.
 
-## Журнал и передача результатов
+**Preview inventory** returns to the inventory display. **BAD BASE** flags an unsuitable base and lets you add a comment. **Clear flag** removes the flag from the Bases page.
 
-Нажмите **Log**, чтобы просмотреть изменения. Журнал хранит **только конечное состояние каждой настройки**, а не каждое движение ползунка. Для одной базы настройки слотов и карточки — две независимые записи. Повторная правка обновляет соответствующую запись.
+## Change log and sharing feedback
 
-Нажмите **Экспорт лога** и передайте владельцу скачанный `Ryquex-feedback.json`. Он содержит ID баз, исходные и конечные настройки, отметки и предложения по модам/пассивкам. Владелец проверяет файл перед применением в рабочем Ryquex.
+Click **Log** to inspect your changes. The journal keeps **one final entry per setting**, not a separate entry for every slider movement. Slot and card appearances are independent entries for the same base. Editing the same setting again updates its entry.
 
-Данные сохраняются вне папки программы:
+Click **Export log** to download `Ryquex-feedback.json`. Send this file to the owner for review and application to the source Ryquex project. It includes stable IDs, original/final appearance settings, base feedback and modifier/passive proposals.
+
+Changes are stored outside the application folder:
 
 ```text
-%LOCALAPPDATA%\RyquexViewer\<идентификатор выпуска>\
+%LOCALAPPDATA%\RyquexViewer\<bundle ID>\
 ```
 
-Они сохраняются после закрытия Viewer и повторного запуска. У нового выпуска каталога может быть отдельный профиль: экспортируйте результаты до смены версии. Старые подробные журналы автоматически сворачиваются; их резервная копия остаётся локально.
+They survive closing and restarting the Viewer. A new catalogue snapshot can have its own profile, so export your feedback before switching releases. Older verbose journals are compacted automatically and backed up locally.
 
-## Обновление
+## Updating
 
-Экспортируйте текущий лог, завершите Viewer кнопкой **Выход**, скачайте новый ZIP и распакуйте его в отдельную папку. Запускайте EXE из новой папки. Не заменяйте файлы работающей программы.
+Export your current feedback, click **Exit**, download the new release and extract it into a new folder. Run the executable from that folder. Do not replace files while the Viewer is running.
 
-## Что включено и что исключено
+English v2 is a separate release. Russian v1.1 remains available in the release history. Export feedback from the old version before switching; its local profile is not deleted.
 
-Пакет содержит только снимок разрешённых каталогов, изображения и компоненты просмотрщика. Заметки владельца, PSD, исходники игры, ключи и настройки рабочего Ryquex не включены.
+## Privacy and scope
 
-Viewer не публикует изменения автоматически и не открывает доступ к проекту владельца. Видимый текст, изображения и HTML/JavaScript самого просмотрщика могут быть скопированы получателем.
+Only the approved catalogue snapshot, artwork and Viewer components are included. The owner's private notes, PSD source files, game source code, keys and working Ryquex settings are excluded.
 
-## Если программа не открывается
+The Viewer does not publish edits or connect to the owner's project. Visible descriptions, images and the Viewer's own HTML/JavaScript can be copied by recipients. User-written comments are stored verbatim and are not automatically translated.
 
-- Убедитесь, что архив полностью распакован и `Public` лежит рядом с EXE.
-- Проверьте, что используется Windows x64 и назначен браузер по умолчанию.
-- Закройте предыдущий Viewer через **Выход** перед запуском другого выпуска.
-- Если появилась ошибка сохранения, не продолжайте правки: сохраните доступный экспорт лога и сообщите владельцу текст ошибки.
+## Troubleshooting
+
+- Confirm that the entire archive was extracted and `Public` is beside the EXE.
+- Confirm that Windows is x64 and a default browser is configured.
+- Stop an old Viewer using **Exit** before starting a different release.
+- If saving fails, stop editing, export any available feedback and report the error to the owner.
